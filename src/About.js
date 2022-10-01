@@ -1,12 +1,11 @@
 import React from "react";
-// import styled from "styled-components";
 import HeroSection from "./components/HeroSection";
 
-const Home = () => {
+const About = () => {
   const data = {
-    name: "LM Store",
+    name: "LM E-commerce",
   };
   return <HeroSection myData={data} />;
 };
 
-export default Home;
+export default About;
