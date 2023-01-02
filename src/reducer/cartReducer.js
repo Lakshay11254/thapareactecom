@@ -33,6 +33,13 @@ const cartReducer = (state, action) => {
       cart: updatedCart,
     };
   }
+  // to empty the cart
+  if (action.type === "CLEAR_CART") {
+    return {
+      ...state,
+      cart: [],
+    };
+  }
 
   return state;
 };
