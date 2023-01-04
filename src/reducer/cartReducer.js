@@ -6,22 +6,47 @@ const cartReducer = (state, action) => {
     //   product
     // );
 
-    let cartProduct;
+    // to tackle the existing product
 
-    cartProduct = {
-      id: id + color,
-      name: product.name,
-      color,
-      amount,
-      image: product.image[0].url,
-      price: product.price,
-      max: product.stock,
-    };
+    let existingProduct = state.cart.find(
+      (curItem) => curItem.id === id + color
+    );
+    if (existingProduct) {
+      let updatedProduct = state.cart.map((curElem) => {
+        if (curElem.id === id + color) {
+          let newAmount = curElem.amount + amount;
 
-    return {
-      ...state,
-      cart: [...state.cart, cartProduct],
-    };
+          if (newAmount >= curElem.max) {
+            newAmount = curElem.max;
+          }
+          return {
+            ...curElem,
+            amount: newAmount,
+          };
+        } else {
+          return curElem;
+        }
+      });
+      return {
+        ...state,
+        cart: updatedProduct,
+      };
+    } else {
+      let cartProduct = {
+        id: id + color,
+        name: product.name,
+        color,
+        amount,
+        image: product.image[0].url,
+        price: product.price,
+        max: product.stock,
+      };
+
+      return {
+        ...state,
+        cart: [...state.cart, cartProduct],
+      };
+    }
   }
 
   if (action.type === "REMOVE_ITEM") {
