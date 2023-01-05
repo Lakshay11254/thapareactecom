@@ -17,7 +17,7 @@ const HeroSection = ({ myData }) => {
               online, on social media, in store, or out of the trunk of your
               car, <b>LM STORE</b> has you covered
             </p>
-            <NavLink>
+            <NavLink to="/products">
               <Button>shop now</Button>
             </NavLink>
           </div>
