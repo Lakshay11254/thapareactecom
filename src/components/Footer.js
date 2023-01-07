@@ -42,13 +42,26 @@ const Footer = () => {
               <h3>Follow Us</h3>
               <div className="footer-social--icons">
                 <div>
-                  <FaDiscord className="icons" />
+                  <a
+                    href="https://discordapp.com/users/374191619638820867"
+                    target="_blank"
+                  >
+                    <FaDiscord className="icons" />
+                  </a>
                 </div>
                 <div>
-                  <FaInstagram className="icons" />
+                  <a
+                    href="https://instagram.com/lakshay_m16?igshid=YmMyMTA2M2Y="
+                    target="_blank"
+                  >
+                    <FaInstagram className="icons" />
+                  </a>
                 </div>
                 <div>
-                  <a href="https://www.youtube.com/" target="_blank">
+                  <a
+                    href="https://youtube.com/@lakshaymalhotra8807"
+                    target="_blank"
+                  >
                     <FaYoutube className="icons" />
                   </a>
                 </div>

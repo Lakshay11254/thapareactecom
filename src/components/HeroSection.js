@@ -11,11 +11,11 @@ const HeroSection = ({ myData }) => {
         <div className="grid grid-two-column">
           <div className="hero-section-data">
             <p className="intro-data">Welcome to </p>
-            <h1> {name} </h1>
+            <h1> LM'S STORE </h1>
             <p>
               The Ecommerce platform made for you<br></br>Whether you sell
               online, on social media, in store, or out of the trunk of your
-              car, <b>LM STORE</b> has you covered
+              car, <b>LakshayMalhotra's Store</b> has you covered
             </p>
             <NavLink to="/products">
               <Button>shop now</Button>
@@ -25,7 +25,7 @@ const HeroSection = ({ myData }) => {
           <div className="hero-section-image">
             <figure>
               <img
-                src="images/hero.jpg"
+                src="images/heroo.jpg"
                 alt="hero-section-photo"
                 className="img-style"
               />
